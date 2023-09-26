@@ -15,7 +15,13 @@ def count_sort(a):
         res[count[i]] = a[i]
         
     return res
-    
+
+
+for i in range(10):
+    a = [random.randint(-100,100) for i in range(10)]
+    if count_sort(a) != sorted(a):
+        print('ERROR')
+
 a = [random.randint(100,1000) for i in range(5000)]
 s = time.time()
 count_sort(a)
